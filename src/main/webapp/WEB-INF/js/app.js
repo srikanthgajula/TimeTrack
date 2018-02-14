@@ -1,7 +1,7 @@
 var myApp = angular.module(
-		"myTimeApp",
+		"timeTrackApp",
 		[ "ngRoute", "ngCookies", "ui.grid", "ui.grid.pagination",
-				"ngMaterial", "ui.bootstrap", "pdf" ]).config(
+				"ngMaterial", "ui.bootstrap"]).config(
 		function($mdDateLocaleProvider) {
 			$mdDateLocaleProvider.formatDate = function(date) {
 				var day = date.getDate();
@@ -14,8 +14,8 @@ var myApp = angular.module(
 
 //TODO: Replace this appUri with the domain name created
 myApp.constant('appConfig', { 
-			appName: "MyTime", 
-			appUri: "http://192.168.15.17:8080/my-time/", 
+			appName: "TimeTrack", 
+			appUri: "http://localhost:8080/time-track/", 
 			version:"1.0", 
 			empStartId:16001, 
 			empEndId:16999
