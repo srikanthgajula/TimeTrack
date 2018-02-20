@@ -1,4 +1,4 @@
-package com.nisum.mytime.configuration;
+package com.track.time.configuration;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;

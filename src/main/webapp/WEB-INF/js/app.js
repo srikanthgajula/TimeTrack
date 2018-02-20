@@ -1,4 +1,4 @@
-var myApp = angular.module(
+var app = angular.module(
 		"timeTrackApp",
 		[ "ngRoute", "ngCookies", "ui.grid", "ui.grid.pagination",
 				"ngMaterial", "ui.bootstrap"]).config(
@@ -13,91 +13,58 @@ var myApp = angular.module(
 		});
 
 //TODO: Replace this appUri with the domain name created
-myApp.constant('appConfig', { 
+app.constant('appConfig', { 
 			appName: "TimeTrack", 
-			appUri: "http://localhost:8080/time-track/", 
+			appUri: "http://localhost:8181/TimeTrack/", 
 			version:"1.0", 
 			empStartId:16001, 
 			empEndId:16999
 		});
 
-myApp.factory('myFactory', function() {
-	var empId = "";
-	var empName = "";
-	var empEmailId = "";
-	var empRole = "";
-	var menuItems = [];
-	var templateUrl = "";
-	var profileUrl = "";
+app.factory('myFactory', function() {
+	var userFirstName = "";
+	var userLastName = "";
+	var emailId = "";
+	var mobileNo = "";
 	
-	function setEmpId(id) {
-		empId = id;
+	function setUserFirstName(fName) {
+		userFirstName = fName;
 	}
-	function getEmpId() {
-		return empId;
-	}
-
-	function setEmpName(name) {
-		empName = name;
-	}
-	function getEmpName() {
-		return empName;
+	function getUserFirstName() {
+		return userFirstName;
 	}
 
-	function setEmpEmailId(email) {
-		empEmailId = email;
+	function setUserLastName(lName) {
+		userLastName = lName;
 	}
-	function getEmpEmailId() {
-		return empEmailId;
-	}
-
-	function setEmpRole(role) {
-		empRole = role;
+	function getUserLastName() {
+		return userLastName;
 	}
 
-	function getEmpRole() {
-		return empRole;
+	function setEmailId(email) {
+		emailId = email;
+	}
+	function getEmailId() {
+		return emailId;
 	}
 
-	function setMenuItems(items) {
-		menuItems = items;
+	function setMobileNo(no) {
+		mobileNo = no;
 	}
 
-	function getMenuItems() {
-		return menuItems;
-	}
-
-	function setTemplateUrl(url) {
-		templateUrl = url;
-	}
-
-	function getTemplateUrl() {
-		return templateUrl;
+	function getMobileNo() {
+		return mobileNo;
 	}
 	
-	function setProfileUrl(picurl) {
-		profileUrl = picurl;
-	}
-
-	function getProfileUrl() {
-		return profileUrl;
-	}
-
 	return {
-		setEmpId : setEmpId,
-		getEmpId : getEmpId,
-		setEmpName : setEmpName,
-		getEmpName : getEmpName,
-		setEmpEmailId : setEmpEmailId,
-		getEmpEmailId : getEmpEmailId,
-		setEmpRole : setEmpRole,
-		getEmpRole : getEmpRole,
-		setMenuItems : setMenuItems,
-		getMenuItems : getMenuItems,
-		setTemplateUrl : setTemplateUrl,
-		getTemplateUrl : getTemplateUrl,
-		setProfileUrl : setProfileUrl,
-		getProfileUrl : getProfileUrl
+		setUserFirstName : setUserFirstName,
+		getUserFirstName : getUserFirstName,
+		setUserLastName : setUserLastName,
+		getUserLastName : getUserLastName,
+		setEmailId : setEmailId,
+		getEmailId : getEmailId,
+		setMobileNo : setMobileNo,
+		getMobileNo : getMobileNo,
 	}
 
 });
