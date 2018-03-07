@@ -1,7 +1,7 @@
 var app = angular.module(
 		"timeTrackApp",
 		[ "ngRoute", "ngCookies", "ui.grid", "ui.grid.pagination",
-				"ngMaterial", "ui.bootstrap"]).config(
+				"ngMaterial", "ui.bootstrap" ]).config(
 		function($mdDateLocaleProvider) {
 			$mdDateLocaleProvider.formatDate = function(date) {
 				var day = date.getDate();
@@ -12,21 +12,22 @@ var app = angular.module(
 			};
 		});
 
-//TODO: Replace this appUri with the domain name created
-app.constant('appConfig', { 
-			appName: "TimeTrack", 
-			appUri: "http://localhost:8181/TimeTrack/", 
-			version:"1.0", 
-			empStartId:16001, 
-			empEndId:16999
-		});
+// TODO: Replace this appUri with the domain name created
+app.constant('appConfig', {
+	appName : "TimeTrack",
+	appUri : "http://localhost:8181/TimeTrack/",
+	version : "1.0",
+	empStartId : 16001,
+	empEndId : 16999
+});
 
 app.factory('myFactory', function() {
 	var userFirstName = "";
 	var userLastName = "";
-	var emailId = "";
 	var mobileNo = "";
-	
+	var emailId = "";
+	var password = "";
+
 	function setUserFirstName(fName) {
 		userFirstName = fName;
 	}
@@ -40,6 +41,13 @@ app.factory('myFactory', function() {
 	function getUserLastName() {
 		return userLastName;
 	}
+	function setMobileNo(no) {
+		mobileNo = no;
+	}
+
+	function getMobileNo() {
+		return mobileNo;
+	}
 
 	function setEmailId(email) {
 		emailId = email;
@@ -48,23 +56,26 @@ app.factory('myFactory', function() {
 		return emailId;
 	}
 
-	function setMobileNo(no) {
-		mobileNo = no;
+	function setPassword(pass) {
+		password = pass;
 	}
 
-	function getMobileNo() {
-		return mobileNo;
+	function getPassword() {
+		return password;
 	}
-	
+
 	return {
 		setUserFirstName : setUserFirstName,
 		getUserFirstName : getUserFirstName,
 		setUserLastName : setUserLastName,
 		getUserLastName : getUserLastName,
-		setEmailId : setEmailId,
-		getEmailId : getEmailId,
 		setMobileNo : setMobileNo,
 		getMobileNo : getMobileNo,
+		setEmailId : setEmailId,
+		getEmailId : getEmailId,
+		setPassword : setPassword,
+		getPassword : getPassword,
+
 	}
 
 });

@@ -16,7 +16,8 @@ app.controller("RegisterController", function($scope, $http,appConfig) {
 			"userFirstName" : $scope.userFirstName,
 			"userLastName" : $scope.userLastName,
 			"mobileNo" : $scope.mobileNo,
-			"emailId": $scope.emailId
+			"emailId": $scope.emailId,
+			"password":$scope.password
 		};	
 
 

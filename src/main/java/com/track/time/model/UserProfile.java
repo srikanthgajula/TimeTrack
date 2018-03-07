@@ -1,12 +1,22 @@
 package com.track.time.model;
 
-public class UserDetails {
+import java.io.Serializable;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+@Document(collection = "userDetails")
+public class UserProfile implements Serializable {
 	private String userFirstName;
 	private String userLastName;
 	private String mobileNo;
 	private String emailId;
-	private String password;
 
 	public String getUserFirstName() {
 		return userFirstName;
@@ -39,13 +49,4 @@ public class UserDetails {
 	public void setEmailId(String emailId) {
 		this.emailId = emailId;
 	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
 }
