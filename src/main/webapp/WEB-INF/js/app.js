@@ -27,6 +27,10 @@ app.factory('myFactory', function() {
 	var mobileNo = "";
 	var emailId = "";
 	var password = "";
+	var role = "";
+	var project = "";
+	var menuItems=[];
+var templateUrl="";
 
 	function setUserFirstName(fName) {
 		userFirstName = fName;
@@ -55,13 +59,38 @@ app.factory('myFactory', function() {
 	function getEmailId() {
 		return emailId;
 	}
-
 	function setPassword(pass) {
 		password = pass;
 	}
-
 	function getPassword() {
 		return password;
+	}
+	function setRole(rol) {
+		role = rol;
+	}
+	function getRole() {
+		return role;
+	}
+	function setProject(proj) {
+		project = proj;
+	}
+	function getProject() {
+		return project;
+	}
+	
+    function setMenuItems(menu) {
+		menuItems = menu;
+	}
+
+	function getMenuItems() {
+		return menuItems;
+	}
+	function setTemplateUrl(url) {
+		templateUrl = url;
+	}
+
+	function getTemplateUrl() {
+		return templateUrl;
 	}
 
 	return {
@@ -75,6 +104,17 @@ app.factory('myFactory', function() {
 		getEmailId : getEmailId,
 		setPassword : setPassword,
 		getPassword : getPassword,
+		setMenuItems : setMenuItems,
+		getMenuItems : getMenuItems,
+		setTemplateUrl : setTemplateUrl,
+		getTemplateUrl : getTemplateUrl,
+		
+		setRole : setRole,
+		getRole : getRole,
+		
+		setProject : setProject,
+		getProject : getProject
+
 
 	}
 

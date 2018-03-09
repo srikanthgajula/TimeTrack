@@ -1,8 +1,8 @@
-myApp.controller("leftmenuController",function($scope, myFactory, $compile){
-	$scope.empId = myFactory.getEmpId();
-	$scope.empName = myFactory.getEmpName();
-	$scope.empEmailId = myFactory.getEmpEmailId();
-	$scope.role = myFactory.getEmpRole();
+app.controller("leftmenuController",function($scope, myFactory, $compile){
+	$scope.userFirstName= myFactory.getUserFirstName();
+	$scope.userLastName = myFactory.getUserLastName();
+	$scope.emailId = myFactory.getEmailId();
+	$scope.mobileNo = myFactory.getMobileNo();
 	$scope.menuItems = myFactory.getMenuItems();
 	
 	$scope.setTemplateUrl = function(path){

@@ -7,6 +7,8 @@ public class UserDetails {
 	private String mobileNo;
 	private String emailId;
 	private String password;
+	private String role;
+	private String project;
 
 	public String getUserFirstName() {
 		return userFirstName;
@@ -47,5 +49,23 @@ public class UserDetails {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public String getProject() {
+		return project;
+	}
+
+	public void setProject(String project) {
+		this.project = project;
+	}
+	
+	
 
 }
