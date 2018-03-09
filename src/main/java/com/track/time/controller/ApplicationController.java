@@ -11,4 +11,11 @@ public class ApplicationController {
 		System.out.println("ApplicationController");
         return "views/index";
     }
+
+@RequestMapping("/login/userprofile")
+public String userProfile() {
+	System.out.println("userprofile");
+    return "views/profile";
 }
+}
+

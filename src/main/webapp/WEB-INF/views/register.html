@@ -1,52 +1,93 @@
-<form ng-cloak name="myForm">
-	<div class="md-padding" style="width: 100%; padding: 3px 0px 0px 0px;"
-		id="popupContainer" ng-controller="RegisterController">
-		<div class="container-fluid mainDivHeaderClass">
-			<div class="row">
-				<div class="col-lg-12">
-					<p align="center" class="col-xs-11"
-						style="vertical-align: middle; font-weight: bold; font-size: 30px;">Employee
-						Registration</p>
-					<p align="right" class="col-xs-1"
-						style="vertical-align: middle; font-weight: bold; font-size: 1.5em; margin-top: 8px; cursor: pointer;">
-					</p>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-		<br />
-		<div class="form-horizontal">
-			<div class="form-group" style="padding-left: 10px;">
-				<div class="form-inline col-lg-12 col-sm-offset-1">
-					<div class="form-group col-lg-4">
-						UserFirstName:<input type="text" ng-model="userFirstName"
-							name="userFirstName" /> <br />
-					</div>
-					<div class="form-group col-lg-4">
-						UserLastName<input type="text" ng-model="userLastName"
-							name="userLastName" /> <br />
-					</div>
-					<div class="form-group col-lg-4">
-						MobileNo<input type="text" ng-model="mobileNo" name="mobileNo" />
-						<br />
-					</div>
-					<div class="form-group col-lg-4">
-						Emailid:<input type="text" ng-model="emailId" name="emailId" /> <br />
+
+<div class="md-padding" style="width: 100%; padding: 3px 0px 0px 0px;"
+	id="popupContainer" ng-controller="RegisterController">
+	<form ng-cloak name="myForm">
+		<center>
+			<table>
+				<div class="container-fluid mainDivHeaderClass">
+					<div class="row">
+						<div class="col-lg-12">
+							<p align="center" class="col-xs-11"
+								style="vertical-align: middle; font-weight: bold; font-size: 30px;">Employee
+								Registration</p>
+							<p align="right" class="col-xs-1"
+								style="vertical-align: middle; font-weight: bold; font-size: 1.5em; margin-top: 8px; cursor: pointer;">
+							</p>
+						</div>
+						<div class="clearfix"></div>
 					</div>
 				</div>
-			</div>
-			<div class="form-group" style="padding-left: 10px;">
-				<div class="form-inline col-lg-12 col-sm-offset-1">
-					<div class="form-group col-lg-4">
-						<label for="submitBtn">
-							<button class="md-raised md-primary"
-								style="width: 100px; background: cadetblue;"
-								ng-click="userRegistration()">Save</button>
-						</label>
-					</div>
+				<br />
+				<div class="form-vertical">
+					<div class="form-group" style="padding-left: 10px;">
+						<div class="form-inline col-lg-12 col-sm-offset-1">
+
+							<tr>
+								<td><div class="form-group col-lg-2">
+										<td>UserFirstName:</td>
+										<td><input type="text" ng-model="userFirstName"
+											name="userFirstName" required /> <br>
+									</div></td>
+							</tr>
+
+							<tr>
+								<td><div class="form-group col-lg-4">
+										<td>UserLastName:</td>
+										<td><input type="text" ng-model="userLastName"
+											name="userLastName" required /> <br />
+									</div></td>
+							</tr>
+				<tr>
+					<td><div class="form-group col-lg-4">
+							<td>Emailid:</td>
+							<td><input type="text" ng-model="emailId" name="emailId" />
+								<br />
+						</div></td>
+				</tr>
+
+				<tr>
+					<td><div class="form-group col-lg-4">
+							<td>Password:</td>
+							<td><input type="password" ng-model="password"
+								name="password" /> <br />
+						</div></td>
+				</tr>
+				<tr>
+					<td><div class="form-group col-sm-4">
+							<td>MobileNo:</td>
+							<td><input type="text" ng-model="mobileNo" name="mobileNo"
+								require /> <br />
+						</div></td>
+				</tr>
 				</div>
-			</div>
-		</div>
-	</div>
-</form>
+				</div>
+
+				<div class="form-group" style="padding-left: 10px;">
+					<div class="form-inline col-lg-12 col-sm-offset-1">
+						<tr>
+							<td><div class="form-group col-lg-4">
+									<label for="submitBtn">
+										<td><button class="md-raised md-primary"
+												style="width: 100px; background: cadetblue;"
+												ng-click="userRegistration()">Submit
+									</label>
+								</div>
+					</div>
+					</td>
+					</tr>
+				</div>
+				</div>
+			</table>
+		</center>
+
+	</form>
+</div>
+
+
+
+
+
+
+
+
 
