@@ -5,14 +5,7 @@ app.controller("headerController",function($scope, myFactory, $compile, $mdDialo
 	$scope.mobileNo = myFactory.getMobileNo();
 	
 	$scope.logout = function() {
-		showProgressDialog(); 
 		
-		var auth2 = gapi.auth2.getAuthInstance();
-	    auth2.signOut().then(function () {
-	      console.log("User signed out.");
-	    });
-	    
-	    auth2.disconnect();
 	    
 		//Clear if any values set to factory
 		var menuItems = [];

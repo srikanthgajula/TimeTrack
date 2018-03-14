@@ -1,5 +1,6 @@
 <div class="md-padding" style="width: 100%; padding: 3px 0px 0px 0px;"
-	id="popupContainer" ng-controller="ProjectController">
+	id="popupContainer" ng-controller="ProfileController"
+	ng-init="refreshPage();">
 	<form ng-cloak name="myForm">
 		<center>
 			<table>
@@ -9,6 +10,8 @@
 							<p align="center" class="col-xs-11"
 								style="vertical-align: middle; font-weight: bold; font-size: 30px;">Project
 								Details</p>
+
+
 							<p align="right" class="col-xs-1"
 								style="vertical-align: middle; font-weight: bold; font-size: 1.5em; margin-top: 8px; cursor: pointer;">
 							</p>
@@ -17,3 +20,33 @@
 					</div>
 				</div>
 				<br />
+
+
+				<div class="row col-lg-12 col-xs-12">
+					<div class="col-lg-5 col-xs-6">
+						<p>
+							<b>Project Name</b>
+						</p>
+					</div>
+					<div class="col-lg-7 col-xs-6">
+						<p>
+							<b>:</b> {{project}}
+						</p>
+					</div>
+				</div>
+				<div class="row col-lg-12 col-xs-12">
+					<div class="col-lg-5 col-xs-6">
+						<p>
+							<b>Project Status</b>
+						</p>
+					</div>
+					<div class="col-lg-7 col-xs-6">
+						<p>
+							<b>:</b> {{status}}
+						</p>
+					</div>
+				</div>
+			</table>
+		</center>
+	</form>
+</div>

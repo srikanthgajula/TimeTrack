@@ -8,7 +8,8 @@ public class UserDetails {
 	private String emailId;
 	private String password;
 	private String role;
-	private String project;
+	private String project;	
+	private String status;
 
 	public String getUserFirstName() {
 		return userFirstName;
@@ -65,6 +66,17 @@ public class UserDetails {
 	public void setProject(String project) {
 		this.project = project;
 	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	
+	
 	
 	
 

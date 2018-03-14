@@ -29,8 +29,12 @@ app.factory('myFactory', function() {
 	var password = "";
 	var role = "";
 	var project = "";
-	var menuItems=[];
-var templateUrl="";
+	var projectName = "";
+	var status = "";
+	var projectstatus = "";
+	var menuItems = [];
+	var projectsList = "";
+	var templateUrl = "";
 
 	function setUserFirstName(fName) {
 		userFirstName = fName;
@@ -77,8 +81,27 @@ var templateUrl="";
 	function getProject() {
 		return project;
 	}
-	
-    function setMenuItems(menu) {
+	function setProjectstatus(proje) {
+		projectstatus = proje;
+	}
+	function getProjectstatus() {
+		return projectstatus;
+	}
+	function setProjectName(name) {
+		projectname = name;
+	}
+	function getProjectName() {
+		return projectname;
+	}
+
+	function setStatus(status) {
+		status = status;
+	}
+	function getStatus() {
+		return status;
+	}
+
+	function setMenuItems(menu) {
 		menuItems = menu;
 	}
 
@@ -91,6 +114,13 @@ var templateUrl="";
 
 	function getTemplateUrl() {
 		return templateUrl;
+	}
+	function setProjectsList(projects) {
+		projectsList = projects;
+	}
+
+	function getProjectsList() {
+		return projectsList;
 	}
 
 	return {
@@ -108,13 +138,20 @@ var templateUrl="";
 		getMenuItems : getMenuItems,
 		setTemplateUrl : setTemplateUrl,
 		getTemplateUrl : getTemplateUrl,
-		
+
 		setRole : setRole,
 		getRole : getRole,
-		
-		setProject : setProject,
-		getProject : getProject
 
+		setProject : setProject,
+		getProject : getProject,
+		setProjectstatus : setProjectstatus,
+		getProjectstatus : getProjectstatus,
+		setProjectName : setProjectName,
+		getProjectName : getProjectName,
+		setStatus : setStatus,
+		getStatus : getStatus,
+		setProjectsList : setProjectsList,
+		getProjectsList : getProjectsList
 
 	}
 
