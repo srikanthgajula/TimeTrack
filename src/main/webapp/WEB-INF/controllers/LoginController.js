@@ -1,5 +1,6 @@
 app.controller("LoginController", function($scope, $http,appConfig,$compile,myFactory,$timeout) {
 	var menuItems = myFactory.getMenuItems();
+	
 	$scope.userLogin = function() {
 		
 		var record = {
@@ -31,6 +32,8 @@ app.controller("LoginController", function($scope, $http,appConfig,$compile,myFa
 		myFactory.setUserLastName(userDetails.userLastName);
 		myFactory.setEmailId(userDetails.emailId);
 		myFactory.setMobileNo(userDetails.mobileNo);
+		myFactory.setProject(userDetails.project);
+		myFactory.setStatus(userDetails.status);
 		var role=userDetails.role;
 		myFactory.setRole(role);
 		if(role=="HR"){
@@ -57,11 +60,14 @@ app.controller("LoginController", function($scope, $http,appConfig,$compile,myFa
 	};
 	
 	function redirectToLoginPage(){
+		
 		menuItems = [];
 		myFactory.setUserFirstName("");
 		myFactory.setUserLastName("");
 		myFactory.setEmailId("");
 		myFactory.setMobileNo("");
+		myFactory.setProject("");
+		myFactory.setStatus("");
 		myFactory.setMenuItems(menuItems);
 		var element = document.getElementById('home');
 		var path = "'views/login.html'";

@@ -1,6 +1,7 @@
 
 <div class="md-padding" style="width: 100%; padding: 3px 0px 0px 0px;"
-	id="popupContainer" ng-controller="RegisterController">
+	id="popupContainer" ng-controller="RegisterController"
+	ng-init="getProjects()">
 	<form ng-cloak name="myForm">
 		<center>
 			<table>
@@ -37,30 +38,46 @@
 											name="userLastName" required /> <br />
 									</div></td>
 							</tr>
-				<tr>
-					<td><div class="form-group col-lg-4">
-							<td>Emailid:</td>
-							<td><input type="text" ng-model="emailId" name="emailId" />
-								<br />
-						</div></td>
-				</tr>
+							<tr>
+								<td><div class="form-group col-lg-4">
+										<td>Emailid:</td>
+										<td><input type="text" ng-model="emailId" name="emailId" />
+											<br />
+									</div></td>
+							</tr>
 
-				<tr>
-					<td><div class="form-group col-lg-4">
-							<td>Password:</td>
-							<td><input type="password" ng-model="password"
-								name="password" /> <br />
-						</div></td>
-				</tr>
-				<tr>
-					<td><div class="form-group col-sm-4">
-							<td>MobileNo:</td>
-							<td><input type="text" ng-model="mobileNo" name="mobileNo"
-								require /> <br />
-						</div></td>
-				</tr>
+							<tr>
+								<td><div class="form-group col-lg-4">
+										<td>Password:</td>
+										<td><input type="password" ng-model="password"
+											name="password" /> <br />
+									</div></td>
+							</tr>
+							<tr>
+								<td><div class="form-group col-sm-4">
+										<td>MobileNo:</td>
+										<td><input type="text" ng-model="mobileNo"
+											name="mobileNo" require /> <br />
+									</div></td>
+							</tr>
+							<tr>
+								<td><div class="form-group col-sm-4">
+										<td>List of Projects</td>
+										<td><md-select ng-model="project" id="projectName" 
+												style="margin: 0px;width: 148px;"> <md-optgroup
+												label="projects"> <md-option
+												ng-repeat="list in projectsList" value={{list.projectName}}>{{list.projectName}}</md-option>
+											</md-optgroup> </md-select></td>
+									</div></td>
+							</tr>
+
+							
+
+
+
 				</div>
 				</div>
+
 
 				<div class="form-group" style="padding-left: 10px;">
 					<div class="form-inline col-lg-12 col-sm-offset-1">
